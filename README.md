@@ -8,22 +8,26 @@
 > 
 > 在build/webpack.base.config中可以设置alias设置相应的别名，可以在导入时简化路径
 
-###vue-router2.0 
+##vue-router2.0 
 重定向routes [{path:'/',redirect:{'/', 'goods'}}];不再是1.0中的.go()
 
 expected "indent", got "eos" 在写stylus时碰到这种问题，肯定是由于编辑器使用了不一样的缩进方式，需要进行设置即可。因为他在你的编辑器中可能是对齐了的，但是实际并没有。
 stylus mixin只可以为样式提供函数的功能
 
-###Axios
+##Axios
 在vue1.x的时候，vue的官方推荐HTTP请求工具是vue-resource，但是在vue2.0的时候将推荐工具改成了axios。使用方式都差不多，但需要注意的是：接口返回的res并不直接是返回的数据，而是经过axios本身处理过的json对象。真正的数据在res.data里
 
 vue2.0废除了v-el指令，所有的节点指令修改为ref，然后通过ref来获取元素节点，如
-<pre><code> 
-<div ref="testHook">test</div> 
-...js code this.$ref.testHook
+<pre><code>
+```html
+<div ref="testHook">test</div>
+```
+```js
+...code this.$ref.testHook
+```
 </code></pre>
 
-###使用emit来发送广播
+##使用emit来发送广播
 
 vue2提供了一套广播机制，即一边发送广播，一边接收广播来执行相应操作。
 

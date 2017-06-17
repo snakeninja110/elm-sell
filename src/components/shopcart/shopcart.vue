@@ -335,16 +335,24 @@
     .ball-container
       .ball
         position: fixed
-        left: 32px
-        bottom: 22px
+        left: 31px
+        bottom: 21px
         z-index: 200
         transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41)
         .inner
-          width: 16px
-          height: 16px
+          width: 18px
+          height: 18px
           border-radius: 50%
           background: rgb(0, 160, 220)
           transition: all 0.4s linear
+          text-align center
+          &:before
+            display block
+            line-height 18px
+            content '1'
+            font-size 12px
+            color #fff
+
     .shopcart-list
       position: absolute
       top: 0
